@@ -1,9 +1,9 @@
 <div class="container my-5">
-    <h1 class="mb-3">Add New Student</h1>
+    <h1 class="mb-3">Update Student</h1>
 
     <div class="row">
         <div class="col-6">
-            <form #form="ngForm">
+            <form #form="ngForm" (ngSubmit)="updateStudent()">
 
                 <div class="mb-3">
                     <label for="id" class="form-label"> Id</label>
@@ -44,6 +44,8 @@
                  
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-danger"
+                (click)="deleteStudent(studentDetails.id)">Delete</button>
               </form>
         </div>
 

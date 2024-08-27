@@ -1,45 +1,43 @@
-<div class="container my-5">
-    <h1 class="mb-3">Add New Student</h1>
+<div class="container my-5 p-2 shadow-lg rounded bg-light">
+    <h1 class="mb-4 text-center text-primary">Add New Student</h1>
 
-    <div class="row">
-        <div class="col-6">
-            <form #form="ngForm" (ngSubmit)="addStudent()"  >
-                <div class="mb-3">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <form #form="ngForm" (ngSubmit)="addStudent()">
+                <div class="mb-4">
                     <label for="std" class="form-label">Student Id</label>
-                    <input type="text" class="form-control" id="std_id" 
-                    name="std"  [(ngModel)]="addStudentRequest.std">
-                 
+                    <input type="text" class="form-control form-control-lg rounded-pill" id="std_id" 
+                           name="std"  [(ngModel)]="addStudentRequest.std" placeholder="Enter Student ID">
                 </div>
-                <div class="mb-3">
+
+                <div class="mb-4">
                     <label for="name" class="form-label">Student Name</label>
-                    <input type="text" class="form-control" id="name" 
-                    name="name"  [(ngModel)]="addStudentRequest.name">
-                 
+                    <input type="text" class="form-control form-control-lg rounded-pill" id="name" 
+                           name="name"  [(ngModel)]="addStudentRequest.name" placeholder="Enter Student Name">
                 </div>
-                <div class="mb-3">
+
+                <div class="mb-4">
                     <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email"
-                    name="email"  [(ngModel)]="addStudentRequest.email">
-                 
+                    <input type="email" class="form-control form-control-lg rounded-pill" id="email"
+                           name="email"  [(ngModel)]="addStudentRequest.email" placeholder="Enter Email Address">
                 </div>
 
-                <div class="mb-3">
+                <div class="mb-4">
                     <label for="phone" class="form-label">Phone</label>
-                    <input type="text" class="form-control" id="phone"
-                    name="phone"  [(ngModel)]="addStudentRequest.phone">
-                 
+                    <input type="text" class="form-control form-control-lg rounded-pill" id="phone"
+                           name="phone"  [(ngModel)]="addStudentRequest.phone" placeholder="Enter Phone Number">
                 </div>
 
-                <div class="mb-3">
+                <div class="mb-4">
                     <label for="department" class="form-label">Department</label>
-                    <input type="text" class="form-control" id="department"
-                    name="department"  [(ngModel)]="addStudentRequest.department">
-                 
+                    <input type="text" class="form-control form-control-lg rounded-pill" id="department"
+                           name="department"  [(ngModel)]="addStudentRequest.department" placeholder="Enter Department">
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
-        </div>
 
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-lg rounded-pill">Submit</button>
+                </div>
+            </form>
+        </div>
     </div>
-   
 </div>

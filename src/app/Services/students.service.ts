@@ -22,4 +22,12 @@ export class StudentsService {
    getStudent(id:string):Observable<Student>{
     return this.http.get<Student> (this.baseApiUrl + '/api/student/'+id)
    }
+
+   updateStudent(id:string,updateStudentRequest:Student):Observable<Student>{
+    return this.http.put<Student>(this.baseApiUrl+ '/api/student/' +id,updateStudentRequest)
+   }
+   deleteStudent(id:string) :Observable<Student>{
+    return this.http.delete<Student>(this.baseApiUrl + '/api/student/'+id);
+   }
+  
 }
