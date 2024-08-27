@@ -1,21 +1,18 @@
 <div class="container my-5">
-    <h1 class="mb-4 text-center text-primary">Students</h1>
+    <h1 class="mb-4 text-center text-primary">Students Directory</h1>
     <div class="container-fluid">
         <div class="navbar bg-body-tertiary">
-
-        <div class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
-          [(ngModel)]="searchTerm" >
-          <button class="btn btn-outline-success"  (click)="searchStudent()"type="submit">Search</button>
+            <div class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="searchTerm">
+                <button class="btn btn-outline-success" (click)="searchStudent()" type="submit">Search</button>
+            </div>
         </div>
-      </div>
     </div>
     
-    <div class="table-responsive shadow-lg rounded">
+    <div class="table-responsive shadow-lg rounded" id="student-table">
         <table class="table table-hover table-bordered text-center align-middle">
             <thead class="table-primary">
                 <tr>
-                  
                     <th>Student Id</th>
                     <th>Name</th>
                     <th>Email</th>
@@ -26,7 +23,6 @@
             </thead>
             <tbody>
                 <tr *ngFor="let student of filteredStudents">
-                   
                     <td>{{student.std}}</td> 
                     <td>{{student.name}}</td> 
                     <td>{{student.email}}</td>
@@ -41,5 +37,10 @@
             </tbody>
         </table>
     </div>
+
+    <button type="button" class="btn btn-success btn-lg px-4 mt-3 rounded-pill shadow-sm" (click)="generatePDF()">
+        Generate Report
+    </button>
     
     <p *ngIf="!filteredStudents || filteredStudents.length <= 0" class="text-center text-muted mt-4">No Students found</p>
+</div>
