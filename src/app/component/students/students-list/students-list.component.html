@@ -1,19 +1,30 @@
 <div class="container my-5">
     <h1 class="mb-4 text-center text-primary">Students Directory</h1>
+    
     <div class="container-fluid">
-        <div class="navbar bg-body-tertiary">
-            <div class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="searchTerm">
-                <button class="btn btn-outline-success" (click)="searchStudent()" type="submit">Search</button>
+        <div class="navbar bg-body-tertiary p-3 rounded shadow-sm mb-4">
+            <div class="input-group">
+                <input class=" rounded-pill border-0 shadow-sm ms-2" 
+                       type="search" 
+                       placeholder="   Search by Student ID" 
+                       aria-label="Search" 
+                       [(ngModel)]="searchTerm"
+                       style="width: -auto;">
+                <button class="btn btn-primary rounded-pill ms-5 shadow-sm" 
+                        (click)="searchStudent()" 
+                        type="submit">
+                    <i class="bi bi-search"></i> Search
+                </button>
             </div>
         </div>
     </div>
+    
     
     <div class="table-responsive shadow-lg rounded" id="student-table">
         <table class="table table-hover table-bordered text-center align-middle">
             <thead class="table-primary">
                 <tr>
-                    <th>Student Id</th>
+                    <th>Student ID</th>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Phone</th>
