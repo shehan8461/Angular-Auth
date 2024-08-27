@@ -15,4 +15,11 @@ export class StudentsService {
   getAllStudents(): Observable<Student[]>{
     return this.http.get<Student[]>(this.baseApiUrl+'/api/student')
   }
+  addStudent(addStudentRequest : Student):Observable<Student>{
+    addStudentRequest.id='00000000-0000-0000-0000-000000000000'
+    return this.http.post<Student>(this.baseApiUrl + '/api/student',addStudentRequest);
+   }
+   getStudent(id:string):Observable<Student>{
+    return this.http.get<Student> (this.baseApiUrl + '/api/student/'+id)
+   }
 }

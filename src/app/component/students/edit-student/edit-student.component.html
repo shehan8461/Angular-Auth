@@ -3,37 +3,44 @@
 
     <div class="row">
         <div class="col-6">
-            <form #form="ngForm" (ngSubmit)="addStudent()"  >
+            <form #form="ngForm">
+
+                <div class="mb-3">
+                    <label for="id" class="form-label"> Id</label>
+                    <input type="text" class="form-control" id="id" readonly 
+                    name="id"  [(ngModel)]="studentDetails.id">
+                 
+                </div>
                 <div class="mb-3">
                     <label for="std" class="form-label">Student Id</label>
                     <input type="text" class="form-control" id="std_id" 
-                    name="std"  [(ngModel)]="addStudentRequest.std">
+                    name="std"  [(ngModel)]="studentDetails.std">
                  
                 </div>
                 <div class="mb-3">
                     <label for="name" class="form-label">Student Name</label>
                     <input type="text" class="form-control" id="name" 
-                    name="name"  [(ngModel)]="addStudentRequest.name">
+                    name="name"  [(ngModel)]="studentDetails.name">
                  
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
                     <input type="email" class="form-control" id="email"
-                    name="email"  [(ngModel)]="addStudentRequest.email">
+                    name="email"  [(ngModel)]="studentDetails.email">
                  
                 </div>
 
                 <div class="mb-3">
                     <label for="phone" class="form-label">Phone</label>
                     <input type="text" class="form-control" id="phone"
-                    name="phone"  [(ngModel)]="addStudentRequest.phone">
+                    name="phone"  [(ngModel)]="studentDetails.phone">
                  
                 </div>
 
                 <div class="mb-3">
                     <label for="department" class="form-label">Department</label>
                     <input type="text" class="form-control" id="department"
-                    name="department"  [(ngModel)]="addStudentRequest.department">
+                    name="department"  [(ngModel)]="studentDetails.department">
                  
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
