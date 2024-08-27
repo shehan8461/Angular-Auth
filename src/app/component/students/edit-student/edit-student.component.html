@@ -1,54 +1,51 @@
-<div class="container my-5">
-    <h1 class="mb-3">Update Student</h1>
+<div class="container my-5 p-4 shadow-lg rounded bg-light">
+    <h1 class="mb-4 text-center text-primary">Update Student</h1>
 
-    <div class="row">
-        <div class="col-6">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
             <form #form="ngForm" (ngSubmit)="updateStudent()">
-
-                <div class="mb-3">
-                    <label for="id" class="form-label"> Id</label>
-                    <input type="text" class="form-control" id="id" readonly 
-                    name="id"  [(ngModel)]="studentDetails.id">
-                 
+                <div class="mb-4">
+                    <label for="id" class="form-label">Id</label>
+                    <input type="text" class="form-control form-control-lg rounded-pill" id="id" 
+                           name="id" readonly [(ngModel)]="studentDetails.id">
                 </div>
-                <div class="mb-3">
+
+                <div class="mb-4">
                     <label for="std" class="form-label">Student Id</label>
-                    <input type="text" class="form-control" id="std_id" 
-                    name="std"  [(ngModel)]="studentDetails.std">
-                 
+                    <input type="text" class="form-control form-control-lg rounded-pill" id="std_id" 
+                           name="std" [(ngModel)]="studentDetails.std" placeholder="Enter Student ID">
                 </div>
-                <div class="mb-3">
+
+                <div class="mb-4">
                     <label for="name" class="form-label">Student Name</label>
-                    <input type="text" class="form-control" id="name" 
-                    name="name"  [(ngModel)]="studentDetails.name">
-                 
+                    <input type="text" class="form-control form-control-lg rounded-pill" id="name" 
+                           name="name" [(ngModel)]="studentDetails.name" placeholder="Enter Student Name">
                 </div>
-                <div class="mb-3">
+
+                <div class="mb-4">
                     <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email"
-                    name="email"  [(ngModel)]="studentDetails.email">
-                 
+                    <input type="email" class="form-control form-control-lg rounded-pill" id="email" 
+                           name="email" [(ngModel)]="studentDetails.email" placeholder="Enter Email Address">
                 </div>
 
-                <div class="mb-3">
+                <div class="mb-4">
                     <label for="phone" class="form-label">Phone</label>
-                    <input type="text" class="form-control" id="phone"
-                    name="phone"  [(ngModel)]="studentDetails.phone">
-                 
+                    <input type="text" class="form-control form-control-lg rounded-pill" id="phone" 
+                           name="phone" [(ngModel)]="studentDetails.phone" placeholder="Enter Phone Number">
                 </div>
 
-                <div class="mb-3">
+                <div class="mb-4">
                     <label for="department" class="form-label">Department</label>
-                    <input type="text" class="form-control" id="department"
-                    name="department"  [(ngModel)]="studentDetails.department">
-                 
+                    <input type="text" class="form-control form-control-lg rounded-pill" id="department" 
+                           name="department" [(ngModel)]="studentDetails.department" placeholder="Enter Department">
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-                <button type="button" class="btn btn-danger"
-                (click)="deleteStudent(studentDetails.id)">Delete</button>
-              </form>
-        </div>
 
+                <div class="d-flex justify-content-between">
+                    <button type="submit" class="btn btn-primary btn-lg rounded-pill">Submit</button>
+                    <button type="button" class="btn btn-danger btn-lg rounded-pill" 
+                            (click)="deleteStudent(studentDetails.id)">Delete</button>
+                </div>
+            </form>
+        </div>
     </div>
-   
 </div>
